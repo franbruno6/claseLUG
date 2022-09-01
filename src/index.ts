@@ -1,0 +1,1 @@
+export const tomi = (name:string) => `Hola ${name}`

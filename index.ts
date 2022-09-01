@@ -1,9 +1,12 @@
-import express from 'express';
+import express, { request } from 'express';
+import { tomi } from './src';
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+
+app.post("/", (req, res) => {
+  console.log(req.body)
+  res.send(tomi("tomasito"));
 })
 
 const port = process.env.PORT || 3001;
